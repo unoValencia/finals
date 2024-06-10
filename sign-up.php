@@ -161,15 +161,15 @@
                         <h5 class="text-white mb-3">Sitemap</h5>
 
                         <ul class="footer-menu d-flex flex-wrap">
-                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">Story</a></li>
+                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">About</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+                            <li class="footer-menu-item"><a href="products.php" class="footer-menu-link">Products</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+                            <li class="footer-menu-item"><a href="" class="footer-menu-link">Privacy policy</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+                            <li class="footer-menu-item"><a href="faq.php" class="footer-menu-link">FAQs</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                            <li class="footer-menu-item"><a href="contact.php" class="footer-menu-link">Contact</a></li>
                         </ul>
                     </div>
 
@@ -178,13 +178,12 @@
 
                         <ul class="social-icon">
 
-                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-whatsapp"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-instagram"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-skype"></a></li>
                         </ul>
                     </div>
 

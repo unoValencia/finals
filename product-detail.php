@@ -48,7 +48,7 @@ https://www.tooplate.com/view/2127-little-fashion
                     </button>
 
                     <a class="navbar-brand" href="index.php">
-                        <strong><span>Little</span> Fashion</strong>
+                    <strong><span>Marga's</span> Cakes</strong>
                     </a>
 
                     <div class="d-lg-none">
@@ -262,19 +262,16 @@ https://www.tooplate.com/view/2127-little-fashion
                         <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
                     </div>
 
-                    <div class="col-lg-5 col-8">
-                        <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">About</a></li>
 
-                        <ul class="footer-menu d-flex flex-wrap">
-                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">Story</a></li>
+                            <li class="footer-menu-item"><a href="products.php" class="footer-menu-link">Products</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+                            <li class="footer-menu-item"><a href="" class="footer-menu-link">Privacy policy</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+                            <li class="footer-menu-item"><a href="faq.php" class="footer-menu-link">FAQs</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
-
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                            <li class="footer-menu-item"><a href="contact.php" class="footer-menu-link">Contact</a></li>
                         </ul>
                     </div>
 
@@ -283,13 +280,12 @@ https://www.tooplate.com/view/2127-little-fashion
 
                         <ul class="social-icon">
 
-                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-whatsapp"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-instagram"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon-link bi-skype"></a></li>
                         </ul>
                     </div>
 
