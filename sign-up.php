@@ -7,8 +7,8 @@
   if(isset($_POST["signup"])) {
     $username = $_POST['username'];
     $email= $_POST['email'];
-    $password = $_POST['password'];
-    $confirm = $_POST['confirm'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    
    
     
 
@@ -19,8 +19,6 @@
         $error_message ="Username already exists.Please Choose
         a diffent username.";
     }
-}else{
-    $error_message = "Password did not match";
 }
 
   }
@@ -202,6 +200,104 @@
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
         <script src="/js/script.js"></script>
+        <script>  form.addEventListener("submit", (event) => {
+  // Prevent form submission if the current step is not valid
+  if (!validateStep(currentStep)) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 
+  // Add the 'was-validated' class to the form for Bootstrap styling
+  form.classList.add("was-validated");
+}, false);
+
+// Function to move to the next step
+window.nextStep = () => {
+  // Only proceed to the next step if the current step is valid
+  if (validateStep(currentStep)) {
+    steps[currentStep].classList.remove("form-step-active"); // Hide the current step
+    currentStep++; // Increment the current step index
+    steps[currentStep].classList.add("form-step-active"); // Show the next step
+  }
+};
+
+// Function to move to the previous step
+window.prevStep = () => {
+  steps[currentStep].classList.remove("form-step-active"); // Hide the current step
+  currentStep--; // Decrement the current step index
+  steps[currentStep].classList.add("form-step-active"); // Show the previous step
+};
+
+// Function to validate all inputs in the current step
+function validateStep(step) {
+  let valid = true;
+  // Select all input and select elements in the current step
+  const stepInputs = steps[step].querySelectorAll("input, select");
+
+  // Validate each input element
+  stepInputs.forEach(input => {
+    if (!validateInput(input)) {
+      valid = false; // If any input is invalid, set valid to false
+    }
+  });
+
+  return valid; // Return the overall validity of the step
+}
+
+  
+      function validateInput(input) {
+        if (input.name === 'password') {
+          return validatePassword(input);
+        } else if (input.name === 'confirmPassword') {
+          return validateConfirmPassword(input);
+        } else {
+          if (input.checkValidity()) {
+            input.classList.remove("is-invalid");
+            input.classList.add("is-valid");
+            return true;
+          } else {
+            input.classList.remove("is-valid");
+            input.classList.add("is-invalid");
+            return false;
+          }
+        }
+      }
+  
+      function validatePassword(passwordInput) {
+        const password = passwordInput.value;
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        if (regex.test(password)) {
+          passwordInput.classList.remove("is-invalid");
+          passwordInput.classList.add("is-valid");
+          return true;
+        } else {
+          passwordInput.classList.remove("is-valid");
+          passwordInput.classList.add("is-invalid");
+          return false;
+        }
+      }
+  
+      function validateConfirmPassword(confirmPasswordInput) {
+        const passwordInput = form.querySelector("input[name='password']");
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+      
+        if (password === confirmPassword && password !== '') {
+          confirmPasswordInput.classList.remove("is-invalid");
+          confirmPasswordInput.classList.add("is-valid");
+          return true;
+        } else {
+          confirmPasswordInput.classList.remove("is-valid");
+          confirmPasswordInput.classList.add("is-invalid");
+          return false;
+        }
+      }
+
+       document.addEventListener("keydown", (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
     </body>
 </html>

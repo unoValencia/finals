@@ -38,7 +38,7 @@ function signup($username, $email, $password){
 
 // Check if the username is already exists
 
-    $query=$con->prepare("SELECT username FROM .signup WHERE username =?");
+    $query=$con->prepare("SELECT username FROM signup WHERE username =?");
     $query->execute([$username]);
     $existingUser= $query->fetch();
     
@@ -48,7 +48,7 @@ function signup($username, $email, $password){
     return false;
 }
 // Insert the new username and password into the database
-    return $con->prepare("INSERT INTO .signup(username,email,password)
+    return $con->prepare("INSERT INTO signup(username,email,password)
 VALUES (?, ?, ?)")
            ->execute([$username,$email, $password]);
            

@@ -1,9 +1,13 @@
 <?php
- 
- require_once('classes/database.php');
- $con=new database();
+require_once('classes/database.php');
+$con = new database();
 session_start();
+if(isset($_SESSION["username"])) {
+  header('location:index.php');
+}
 
+?>
+<?php
 if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -103,7 +107,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </div>
                         <?php endif; ?>
 
-                                        <input type="submit" class="btn custom-btn form-control mt-4 mb-3" name="login" value="Sign-In">
+                                        <input type="submit" class="btn custom-btn form-control mt-4 mb-3" name="login" value="Login">
                                            
                                         </input>
 
