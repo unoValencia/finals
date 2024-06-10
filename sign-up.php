@@ -12,7 +12,6 @@
    
     
 
-    if($password==$confirm) {
         if ($con->signup($username,$email,$password)) {
             header('location:sign-in.php');
     }else{
@@ -21,7 +20,6 @@
     }
 }
 
-  }
  ?>
 
 
