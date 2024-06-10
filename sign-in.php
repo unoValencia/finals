@@ -1,3 +1,34 @@
+<?php
+ 
+ require_once('classes/database.php');
+ $con=new database();
+session_start();
+
+if (isset($_POST['login'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $result = $con->check($username, $password);  
+
+if($result) {
+      $_SESSION['username'] = $result['username'];
+      $_SESSION['User_Id'] = $result['User_Id'];
+  if ($result['account_type']==0){
+     header('location:index.php');
+  }
+  else if ($result['account_type']==1){
+      header('location:admin.php');
+  }
+}
+  else{
+$error = "Incorrect username or password ";
+  }
+}
+?>
+
+
+
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,7 +38,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Tooplate's Little Fashion - Sign Up Page</title>
+        <title>Tooplate's Little Fashion - Sign In Page</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,54 +79,35 @@ https://www.tooplate.com/view/2127-little-fashion
 
                         <div class="col-lg-8 mx-auto col-12">
 
-                            <h1 class="hero-title text-center mb-5">Sign Up</h1>
-
-                            <div class="social-login d-flex flex-column w-50 m-auto">
-                                
-                                <a href="#" class="btn custom-btn social-btn mb-4">
-                                    <i class="bi bi-google me-3"></i>
-
-                                    Continue with Google
-                                </a>
-
-                                <a href="#" class="btn custom-btn social-btn">
-                                    <i class="bi bi-facebook me-3"></i>
-
-                                    Continue with Facebook
-                                </a>
-                            </div>
-
-                            <div class="div-separator w-50 m-auto my-5"><span>or</span></div>
+                            <h1 class="hero-title text-center mb-5">Sign In</h1>
 
                             <div class="row">
                                 <div class="col-lg-8 col-11 mx-auto">
-                                    <form role="form" method="post">
+                                    <form role="form" method="post" novalidate>
 
-                                        <div class="form-floating">
-                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
+                                        <div class="form-floating mb-4 p-0">
+                                            <input type="text" name="username" id="username"  class="form-control" placeholder="Username" required>
 
-                                            <label for="email">Email address</label>
+                                            <label for="email">Username</label>
                                         </div>
 
-                                        <div class="form-floating my-4">
-                                            <input type="password" name="password" id="password" pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="Password" required>
+                                        <div class="form-floating p-0">
+                                            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
 
                                             <label for="password">Password</label>
-                                            
-                                            <p class="text-center">* shall include 0-9 a-z A-Z in 4 to 10 characters</p>
                                         </div>
+                                        <?php if (!empty($error_message)) : ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <?php echo $error_message; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
 
-                                        <div class="form-floating">
-                                            <input type="password" name="confirm_password" id="confirm_password" pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="Password" required>
+                                        <input type="submit" class="btn custom-btn form-control mt-4 mb-3" name="login" value="Sign-In">
+                                           
+                                        </input>
 
-                                            <label for="confirm_password">Password Confirmation</label>
-                                        </div>
-
-                                        <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
-                                            Create account
-                                        </button>
-
-                                        <p class="text-center">Already have an account? Please <a href="sign-in.html">Sign In</a></p>
+                                        <p class="text-center">Don’t have an account? <a href="sign-up.php">Create One</a></p>
 
                                     </form>
                                 </div>
@@ -114,7 +126,7 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="row">
 
                     <div class="col-lg-3 col-10 me-auto mb-4">
-                        <h4 class="text-white mb-3"><a href="index.html">Little</a> Fashion</h4>
+                        <h4 class="text-white mb-3"><a href="index.php">Little</a> Fashion</h4>
                         <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
                         <br>
                         <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
@@ -124,15 +136,15 @@ https://www.tooplate.com/view/2127-little-fashion
                         <h5 class="text-white mb-3">Sitemap</h5>
 
                         <ul class="footer-menu d-flex flex-wrap">
-                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">Story</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+                            <li class="footer-menu-item"><a href="contact.php" class="footer-menu-link">Products</a></li>
 
                             <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+                            <li class="footer-menu-item"><a href="faq.php" class="footer-menu-link">FAQs</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                            <li class="footer-menu-item"><a href="contact.php" class="footer-menu-link">Contact</a></li>
                         </ul>
                     </div>
 
