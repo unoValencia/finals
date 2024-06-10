@@ -47,43 +47,43 @@ https://www.tooplate.com/view/2127-little-fashion
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <strong><span>Little</span> Fashion</strong>
                     </a>
 
                     <div class="d-lg-none">
-                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="sign-in.php" class="bi-person custom-icon me-3"></a>
 
-                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                        <a href="product-detail.php" class="bi-bag custom-icon"></a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.php">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">Story</a>
+                                <a class="nav-link" href="about.php">Story</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="products.html">Products</a>
+                                <a class="nav-link" href="products.php">Products</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="faq.html">FAQs</a>
+                                <a class="nav-link" href="faq.php">FAQs</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                            <a href="sign-in.php" class="bi-person custom-icon me-3"></a>
 
-                            <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                            <a href="product-detail.php" class="bi-bag custom-icon"></a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ https://www.tooplate.com/view/2127-little-fashion
 
                         <div class="col-lg-4 col-12 mb-3">
                             <div class="product-thumb">
-                                <a href="product-detail.html">
+                                <a href="product-detail.php">
                                     <img src="images/product/evan-mcdougall-qnh1odlqOmk-unsplash.jpeg" class="img-fluid product-image" alt="">
                                 </a>
 
@@ -184,7 +184,7 @@ https://www.tooplate.com/view/2127-little-fashion
                                 <div class="product-info d-flex">
                                     <div>
                                         <h5 class="product-title mb-0">
-                                            <a href="product-detail.html" class="product-title-link">Tree pot</a>
+                                            <a href="product-detail.php" class="product-title-link">Tree pot</a>
                                         </h5>
 
                                         <p class="product-p">Original package design from house</p>
@@ -197,7 +197,7 @@ https://www.tooplate.com/view/2127-little-fashion
 
                         <div class="col-lg-4 col-12 mb-3">
                             <div class="product-thumb">
-                                <a href="product-detail.html">
+                                <a href="product-detail.php">
                                     <img src="images/product/jordan-nix-CkCUvwMXAac-unsplash.jpeg" class="img-fluid product-image" alt="">
                                 </a>
 
@@ -210,7 +210,7 @@ https://www.tooplate.com/view/2127-little-fashion
                                 <div class="product-info d-flex">
                                     <div>
                                         <h5 class="product-title mb-0">
-                                            <a href="product-detail.html" class="product-title-link">Fashion set</a>
+                                            <a href="product-detail.php" class="product-title-link">Fashion set</a>
                                         </h5>
 
                                         <p class="product-p">Costume package</p>
@@ -223,7 +223,7 @@ https://www.tooplate.com/view/2127-little-fashion
 
                         <div class="col-lg-4 col-12">
                             <div class="product-thumb">
-                                <a href="product-detail.html">
+                                <a href="product-detail.php">
                                     <img src="images/product/nature-zen-3Dn1BZZv3m8-unsplash.jpeg" class="img-fluid product-image" alt="">
                                 </a>
 
@@ -234,7 +234,7 @@ https://www.tooplate.com/view/2127-little-fashion
                                 <div class="product-info d-flex">
                                     <div>
                                         <h5 class="product-title mb-0">
-                                            <a href="product-detail.html" class="product-title-link">Juice Drinks</a>
+                                            <a href="product-detail.php" class="product-title-link">Juice Drinks</a>
                                         </h5>
 
                                         <p class="product-p">Nature made another world</p>
@@ -256,7 +256,7 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="row">
 
                     <div class="col-lg-3 col-10 me-auto mb-4">
-                        <h4 class="text-white mb-3"><a href="index.html">Little</a> Fashion</h4>
+                        <h4 class="text-white mb-3"><a href="index.php">Little</a> Fashion</h4>
                         <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
                         <br>
                         <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
@@ -266,7 +266,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         <h5 class="text-white mb-3">Sitemap</h5>
 
                         <ul class="footer-menu d-flex flex-wrap">
-                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+                            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">Story</a></li>
 
                             <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
 
